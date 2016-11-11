@@ -1,0 +1,42 @@
+<%include head%>
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-layout" data-options="fit:true" style="width:700px;height:350px;">
+		<div data-options="region:'north'" style="height:50px">
+		     <h2>配置管理界面设计<h2>
+		</div>
+		
+		
+		<div data-options="region:'east',split:true" title="East" style="width:180px;">
+			<ul class="easyui-tree" data-options="url:'data/tree_data1.json',method:'get',animate:true,dnd:true"></ul>
+		</div>
+		<div data-options="region:'west',split:false" title="管理单元一览" style="width:150px;">
+			<div class="easyui-accordion" data-options="fit:true,border:false">
+				<div title="单元管理" style="padding:10px;">
+					content1
+				</div>
+				<div title="资产管理" style="padding:10px;">
+					content2
+				</div>
+				<div title="风控管理" style="padding:10px">
+					content3
+				</div>
+				<div title="视图管理" data-options="selected:true" style="padding:10px">
+					        <a href="#" style="display:block" onclick="addTab('日结单管理','data/tab/tab2.ejs')">日结单管理</a>
+					        <a href="#" style="display:block" onclick="addTab('订单审核管理','data/tab/tab1.ejs')">订单审核管理</a>
+					        <a href="#" style="display:block" onclick="addTab('补单管理','data/tab/tab1.ejs')">补单管理</a>
+					        <a href="#" style="display:block" onclick="addTab('资产管理查询及报表','data/tab/tab1.ejs')">资产管理查询及报表</a>
+					        <a href="#" style="display:block" onclick="addTab('交易单元查询及报表','data/tab/tab1.ejs')">交易单元查询及报表</a>
+				</div>
+				<div title="清算管理" style="padding:10px">
+					content5
+				</div>
+			</div>
+		</div>
+		<div id = "mainPage" data-options="region:'center',title:'操作工作台'">
+			<div id="tt" class="easyui-tabs" fit="true" style="width:400px;height:250px;">
+			<div title="Home"></div>
+        </div>
+	</div>
+	
+
+<%include foot%>
